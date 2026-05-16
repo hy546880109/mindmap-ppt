@@ -3,7 +3,7 @@
   --node-image-thumb-height: 84px;
   --node-image-expanded-width: 437px;
   --node-image-expanded-height: 600px;
-  --active-node-scale: 1.5;
+  --active-node-scale: 1.15;
   color: #172033;
   background: #fcfcf8;
   font-family:
@@ -530,6 +530,14 @@ h1 {
   touch-action: none;
 }
 
+#mindmap.overview-mode {
+  cursor: grab;
+}
+
+#mindmap.overview-dragging {
+  cursor: grabbing;
+}
+
 .map-layer,
 .node-layer,
 .link-layer {
@@ -542,6 +550,10 @@ h1 {
 .map-layer {
   transition: transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
+}
+
+.map-layer.dragging {
+  transition: none;
 }
 
 .node-layer,

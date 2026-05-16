@@ -35,6 +35,20 @@ const wheelNavigation = {
   threshold: 72,
   idleResetMs: 180,
 };
+const zoomLimits = {
+  presentation: {
+    min: 0.7,
+    max: 1.4,
+  },
+  overview: {
+    min: 0.2,
+    max: 1.8,
+  },
+};
+const overviewCamera = {
+  fitPadding: 64,
+  wheelZoomSpeed: 0.0016,
+};
 const swipeNavigation = {
   intentDistance: 10,
   minDistance: 56,
@@ -50,10 +64,16 @@ let renderedLinks = new Map();
 let cameraTargetIndex = null;
 let currentNodeMetrics = new Map();
 let cameraZoom = Number(zoomSlider.value) / 100;
+let presentationZoom = cameraZoom;
 let activeScale = Number(activeScaleSlider.value) / 100;
 let wheelDeltaBuffer = 0;
 let wheelNavigationTimer = null;
 let swipeStart = null;
+let overviewViewportOverride = null;
+let hasAutoFitOverview = false;
+let dragState = null;
+let currentViewport = null;
+let currentModel = null;
 
 assignTreeMetadata(root);
 preorder = collectPreorder(root);
@@ -75,6 +95,9 @@ nodeSlider.addEventListener("input", (event) => {
 });
 zoomSlider.addEventListener("input", (event) => {
   cameraZoom = Number(event.target.value) / 100;
+  if (!isOverviewActive()) {
+    presentationZoom = cameraZoom;
+  }
   render();
 });
 activeScaleSlider.addEventListener("input", (event) => {
@@ -84,6 +107,10 @@ activeScaleSlider.addEventListener("input", (event) => {
 window.addEventListener("keydown", handleKeydown);
 window.addEventListener("wheel", handleWheel, { passive: false });
 window.addEventListener("resize", () => render());
+mindmap.addEventListener("pointerdown", handlePointerDown);
+mindmap.addEventListener("pointermove", handlePointerMove);
+mindmap.addEventListener("pointerup", handlePointerUp);
+mindmap.addEventListener("pointercancel", handlePointerUp);
 mindmap.addEventListener("touchstart", handleTouchStart, { passive: true });
 mindmap.addEventListener("touchmove", handleTouchMove, { passive: false });
 mindmap.addEventListener("touchend", handleTouchEnd, { passive: false });
@@ -126,6 +153,11 @@ function handleWheel(event) {
 
   event.preventDefault();
 
+  if (isOverviewActive()) {
+    zoomOverviewAtPoint(event, deltaY);
+    return;
+  }
+
   if (wheelDeltaBuffer !== 0 && Math.sign(wheelDeltaBuffer) !== Math.sign(deltaY)) {
     wheelDeltaBuffer = 0;
   }
@@ -161,7 +193,7 @@ function normalizeWheelDeltaY(event) {
 }
 
 function handleTouchStart(event) {
-  if (imageViewer.isOpen() || event.touches.length !== 1) {
+  if (imageViewer.isOpen() || isOverviewActive() || event.touches.length !== 1) {
     resetSwipeStart();
     return;
   }
@@ -216,6 +248,51 @@ function handleTouchEnd(event) {
 
 function resetSwipeStart() {
   swipeStart = null;
+}
+
+function handlePointerDown(event) {
+  if (!isOverviewActive() || imageViewer.isOpen() || event.button !== 0 || !isBlankMindmapTarget(event.target)) {
+    return;
+  }
+
+  event.preventDefault();
+  cameraTargetIndex = null;
+  mapLayer.classList.add("dragging");
+  mindmap.classList.add("overview-dragging");
+  mindmap.setPointerCapture(event.pointerId);
+  dragState = {
+    pointerId: event.pointerId,
+    startX: event.clientX,
+    startY: event.clientY,
+    viewportX: currentViewport?.x ?? 0,
+    viewportY: currentViewport?.y ?? 0,
+  };
+}
+
+function handlePointerMove(event) {
+  if (!dragState || event.pointerId !== dragState.pointerId || !currentModel || !currentModel.isEnd) {
+    return;
+  }
+
+  event.preventDefault();
+  const dx = (event.clientX - dragState.startX) / cameraZoom;
+  const dy = (event.clientY - dragState.startY) / cameraZoom;
+  setOverviewViewport({
+    x: dragState.viewportX - dx,
+    y: dragState.viewportY - dy,
+  });
+}
+
+function handlePointerUp(event) {
+  if (!dragState || event.pointerId !== dragState.pointerId) {
+    return;
+  }
+
+  stopOverviewDrag();
+}
+
+function isBlankMindmapTarget(target) {
+  return target === mindmap || target === mapLayer || target === nodeLayer || target === linkLayer;
 }
 
 function parseMarkdownTree(markdown) {
@@ -314,8 +391,19 @@ function collectPreorder(node, list = []) {
 }
 
 function setActiveIndex(index) {
+  const wasOverview = isOverviewActive();
   activeIndex = Math.max(0, Math.min(index, preorder.length));
   cameraTargetIndex = null;
+  if (wasOverview !== isOverviewActive()) {
+    if (wasOverview) {
+      cameraZoom = presentationZoom;
+    } else {
+      presentationZoom = cameraZoom;
+    }
+    overviewViewportOverride = null;
+    hasAutoFitOverview = false;
+    stopOverviewDrag();
+  }
   render();
 }
 
@@ -323,7 +411,11 @@ function render() {
   const activeNode = preorder[activeIndex] ?? null;
   currentNodeMetrics = measureAllNodes(preorder, activeNode);
   const model = activeNode ? buildVisibleModel(activeNode) : buildEndModel();
+  mindmap.classList.toggle("overview-mode", Boolean(model.isEnd));
+  syncOverviewZoomRange(model.isEnd);
   const viewport = computeViewport(model, cameraTargetIndex);
+  currentModel = model;
+  currentViewport = viewport;
 
   syncLinks(model.links);
   syncNodes(model.nodes, activeNode);
@@ -559,7 +651,7 @@ function getNodeMetric(node) {
 
 function computeViewport(model, targetIndex = null) {
   const viewportSize = getViewportSize();
-  const logicalViewport = {
+  let logicalViewport = {
     width: viewportSize.width / cameraZoom,
     height: viewportSize.height / cameraZoom,
   };
@@ -568,6 +660,11 @@ function computeViewport(model, targetIndex = null) {
   }
 
   if (model.isEnd) {
+    ensureOverviewAutoFit(model, viewportSize);
+    logicalViewport = {
+      width: viewportSize.width / cameraZoom,
+      height: viewportSize.height / cameraZoom,
+    };
     return computeEndViewport(model, logicalViewport, targetIndex);
   }
 
@@ -595,6 +692,15 @@ function computeViewport(model, targetIndex = null) {
 }
 
 function computeEndViewport(model, logicalViewport, targetIndex = null) {
+  if (overviewViewportOverride) {
+    return {
+      x: overviewViewportOverride.x,
+      y: overviewViewportOverride.y,
+      width: logicalViewport.width,
+      height: logicalViewport.height,
+    };
+  }
+
   const bounds = computeModelBounds(model.nodes);
   const graphCenterX = (bounds.minX + bounds.maxX) / 2;
   const graphCenterY = (bounds.minY + bounds.maxY) / 2;
@@ -613,6 +719,74 @@ function computeEndViewport(model, logicalViewport, targetIndex = null) {
     width: logicalViewport.width,
     height: logicalViewport.height,
   };
+}
+
+function ensureOverviewAutoFit(model, viewportSize) {
+  if (hasAutoFitOverview || model.nodes.length === 0) {
+    return;
+  }
+
+  const bounds = computeModelBounds(model.nodes);
+  const graphWidth = Math.max(1, bounds.maxX - bounds.minX + overviewCamera.fitPadding * 2);
+  const graphHeight = Math.max(1, bounds.maxY - bounds.minY + overviewCamera.fitPadding * 2);
+  const fitZoom = Math.min(viewportSize.width / graphWidth, viewportSize.height / graphHeight);
+
+  cameraZoom = clamp(fitZoom, zoomLimits.overview.min, zoomLimits.overview.max);
+  overviewViewportOverride = {
+    x: bounds.minX - overviewCamera.fitPadding + (graphWidth - viewportSize.width / cameraZoom) / 2,
+    y: bounds.minY - overviewCamera.fitPadding + (graphHeight - viewportSize.height / cameraZoom) / 2,
+  };
+  hasAutoFitOverview = true;
+}
+
+function syncOverviewZoomRange(isOverview) {
+  const limits = isOverview ? zoomLimits.overview : zoomLimits.presentation;
+  zoomSlider.min = String(Math.round(limits.min * 100));
+  zoomSlider.max = String(Math.round(limits.max * 100));
+  cameraZoom = clamp(cameraZoom, limits.min, limits.max);
+}
+
+function zoomOverviewAtPoint(event, deltaY) {
+  if (!currentViewport || !currentModel?.isEnd) {
+    return;
+  }
+
+  const viewportRect = mindmap.getBoundingClientRect();
+  const pointerX = event.clientX - viewportRect.left;
+  const pointerY = event.clientY - viewportRect.top;
+  const logicalX = currentViewport.x + pointerX / cameraZoom;
+  const logicalY = currentViewport.y + pointerY / cameraZoom;
+  const zoomFactor = Math.exp(-deltaY * overviewCamera.wheelZoomSpeed);
+  const nextZoom = clamp(cameraZoom * zoomFactor, zoomLimits.overview.min, zoomLimits.overview.max);
+
+  if (nextZoom === cameraZoom) {
+    return;
+  }
+
+  cameraZoom = nextZoom;
+  setOverviewViewport({
+    x: logicalX - pointerX / cameraZoom,
+    y: logicalY - pointerY / cameraZoom,
+  });
+}
+
+function setOverviewViewport(viewport) {
+  overviewViewportOverride = viewport;
+  render();
+}
+
+function isOverviewActive() {
+  return activeIndex === preorder.length;
+}
+
+function stopOverviewDrag() {
+  if (dragState && mindmap.hasPointerCapture(dragState.pointerId)) {
+    mindmap.releasePointerCapture(dragState.pointerId);
+  }
+
+  dragState = null;
+  mapLayer.classList.remove("dragging");
+  mindmap.classList.remove("overview-dragging");
 }
 
 function computeModelBounds(nodes) {
