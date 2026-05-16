@@ -2,7 +2,7 @@
 
 ## Repository
 
-Target repo: `https://github.com/agegr/mindmap-ppt`
+Target repo: `https://github.com/hy546880109/mindmap-ppt`
 
 Core files:
 

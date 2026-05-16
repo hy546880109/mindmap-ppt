@@ -1,6 +1,6 @@
 ---
 name: mindmap-ppt-builder
-description: Create or update content for the agegr/mindmap-ppt static presentation project from a prose draft, article, speech, report, or notes. Use when Codex needs to turn a written document into the project's project/source.js Markdown mind-map data, choose which nodes need illustrations, generate or request GPT Image 2 illustrations matching the project's restrained presentation style, place assets under project/, and validate the result with npm run check. Operates only within the current working directory.
+description: Create or update content for the hy546880109/mindmap-ppt static presentation project from a prose draft, article, speech, report, or notes. Use when Codex needs to turn a written document into the project's project/source.js Markdown mind-map data, choose which nodes need illustrations, generate or request GPT Image 2 illustrations matching the project's restrained presentation style, place assets under project/, and validate the result with npm run check. Operates only within the current working directory.
 ---
 
 # Mindmap PPT Builder
@@ -15,7 +15,7 @@ Read `references/project-format.md` when you need exact project file conventions
 
 This skill operates only within the current working directory tree (cwd itself or a `mindmap-ppt/` subfolder under it). Do not search parent, sibling, or home directories for an existing checkout.
 
-- Clone `https://github.com/agegr/mindmap-ppt` into `./mindmap-ppt/` under the current working directory and `cd` in.
+- Clone `https://github.com/hy546880109/mindmap-ppt` into `./mindmap-ppt/` under the current working directory and `cd` in.
 - If `./mindmap-ppt/` already exists, stop and ask the user how to proceed. Do not `cd ..`, `find`, or otherwise probe the filesystem to locate or create a checkout elsewhere.
 - Keep the application repository outside the skill folder. Do not copy or clone `index.html`, `src/`, or `project/` into `.agents/skills/mindmap-ppt-builder/`.
 - Normal skill output should modify only `project/source.js` and local asset files under `project/`.
