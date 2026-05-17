@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2332"/>
+      <stop offset="100%" stop-color="#0f1720"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect x="4" y="8" width="56" height="48" rx="6" fill="url(#bg)" stroke="#a78bfa" stroke-width="1.5"/>
+  <!-- Branch lines -->
+  <circle cx="16" cy="32" r="6" fill="none" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="22" y1="32" x2="32" y2="32" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+  <!-- Merge point -->
+  <circle cx="38" cy="32" r="4" fill="#a78bfa"/>
+  <!-- Branch splits -->
+  <line x1="42" y1="32" x2="48" y2="22" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+  <line x1="42" y1="32" x2="48" y2="42" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/>
+  <!-- End points -->
+  <circle cx="52" cy="20" r="5" fill="none" stroke="#4ade80" stroke-width="2"/>
+  <circle cx="52" cy="44" r="5" fill="none" stroke="#4ade80" stroke-width="2"/>
+  <!-- Checkmarks -->
+  <path d="M49 18 L51 21 L55 16" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M49 42 L51 45 L55 40" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Code brackets hint -->
+  <text x="14" y="35" font-family="monospace" font-size="8" fill="#60a5fa" opacity="0.6">&lt;/&gt;</text>
+</svg>

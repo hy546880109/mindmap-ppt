@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" style="background:#faf8f5">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <rect x="100" y="100" width="500" height="300" rx="12" fill="#183a4a"/>
+  <rect x="200" y="160" width="80" height="80" rx="8" fill="#d8894f"/>
+  <rect x="320" y="160" width="80" height="80" rx="8" fill="#eef7f3"/>
+  <rect x="440" y="160" width="80" height="80" rx="8" fill="#d8894f"/>
+  <text x="140" y="320" font-family="system-ui,sans-serif" font-size="24" fill="#fffdf8" font-weight="bold">AI + 编辑器 + 命令调度器</text>
+  <text x="140" y="360" font-family="system-ui,sans-serif" font-size="16" fill="#eef7f3">超级融合终端</text>
+  <rect x="700" y="150" width="480" height="200" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="750" y="220" font-family="system-ui,sans-serif" font-size="20" fill="#183a4a">三大杀手级符号</text>
+  <text x="750" y="280" font-family="system-ui,sans-serif" font-size="48" fill="#d8894f" font-weight="bold">/  @  !</text>
+  <rect x="100" y="450" width="1080" height="250" rx="12" fill="#fffdf8" stroke="#183a4a" stroke-width="2"/>
+  <text x="150" y="510" font-family="system-ui,sans-serif" font-size="22" fill="#183a4a">别再把它当聊天框了</text>
+  <text x="150" y="560" font-family="system-ui,sans-serif" font-size="18" fill="#666">Claude Code 输入框藏着三大神器</text>
+  <text x="150" y="620" font-family="system-ui,sans-serif" font-size="18" fill="#666">让开发效率直接起飞</text>
+</svg>

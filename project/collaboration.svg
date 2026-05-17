@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2332"/>
+      <stop offset="100%" stop-color="#0f1720"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect x="4" y="8" width="56" height="48" rx="6" fill="url(#bg)" stroke="#f472b6" stroke-width="1.5"/>
+  <!-- Multiple windows -->
+  <!-- Window 1 -->
+  <rect x="10" y="16" width="20" height="14" rx="3" fill="none" stroke="#f472b6" stroke-width="1.5"/>
+  <line x1="10" y1="22" x2="30" y2="22" stroke="#f472b6" stroke-width="1" opacity="0.5"/>
+  <circle cx="14" cy="19" r="1.5" fill="#f472b6" opacity="0.6"/>
+  <circle cx="18" cy="19" r="1.5" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="22" cy="19" r="1.5" fill="#4ade80" opacity="0.6"/>
+  <!-- Window 2 -->
+  <rect x="34" y="16" width="20" height="14" rx="3" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <line x1="34" y1="22" x2="54" y2="22" stroke="#60a5fa" stroke-width="1" opacity="0.5"/>
+  <circle cx="38" cy="19" r="1.5" fill="#f472b6" opacity="0.6"/>
+  <circle cx="42" cy="19" r="1.5" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="46" cy="19" r="1.5" fill="#4ade80" opacity="0.6"/>
+  <!-- Window 3 -->
+  <rect x="22" y="36" width="20" height="14" rx="3" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+  <line x1="22" y1="42" x2="42" y2="42" stroke="#4ade80" stroke-width="1" opacity="0.5"/>
+  <circle cx="26" cy="39" r="1.5" fill="#f472b6" opacity="0.6"/>
+  <circle cx="30" cy="39" r="1.5" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="34" cy="39" r="1.5" fill="#4ade80" opacity="0.6"/>
+  <!-- Connection lines -->
+  <line x1="26" y1="30" x2="30" y2="36" stroke="#f472b6" stroke-width="1" stroke-dasharray="2,2" opacity="0.4"/>
+  <line x1="38" y1="30" x2="34" y2="36" stroke="#60a5fa" stroke-width="1" stroke-dasharray="2,2" opacity="0.4"/>
+</svg>

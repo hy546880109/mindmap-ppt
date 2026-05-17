@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" style="background:#faf8f5">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <rect x="80" y="60" width="1120" height="120" rx="12" fill="#183a4a"/>
+  <text x="110" y="130" font-family="system-ui,sans-serif" font-size="36" fill="#fffdf8" font-weight="bold">斜杠 / ：命令执行的核心</text>
+  <text x="800" y="130" font-family="system-ui,sans-serif" font-size="20" fill="#d8894f">调用内置功能</text>
+
+  <rect x="80" y="200" width="520" height="540" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="120" y="260" font-family="system-ui,sans-serif" font-size="22" fill="#183a4a" font-weight="bold">高频命令清单</text>
+  <text x="120" y="310" font-family="monospace" font-size="18" fill="#183a4a">/help     查看全部功能</text>
+  <text x="120" y="350" font-family="monospace" font-size="18" fill="#183a4a">/clear    清空对话</text>
+  <text x="120" y="390" font-family="monospace" font-size="18" fill="#183a4a">/plan     进入规划模式</text>
+  <text x="120" y="430" font-family="monospace" font-size="18" fill="#183a4a">/model    切换AI模型</text>
+  <text x="120" y="470" font-family="monospace" font-size="18" fill="#183a4a">/context  查看上下文</text>
+  <text x="120" y="510" font-family="monospace" font-size="18" fill="#183a4a">/status   环境状态</text>
+  <text x="120" y="550" font-family="monospace" font-size="18" fill="#183a4a">/theme    切换主题</text>
+  <text x="120" y="590" font-family="monospace" font-size="18" fill="#183a4a">/memory   编辑记忆</text>
+
+  <rect x="640" y="200" width="560" height="540" rx="12" fill="#fffdf8" stroke="#183a4a" stroke-width="2"/>
+  <text x="680" y="260" font-family="system-ui,sans-serif" font-size="22" fill="#183a4a" font-weight="bold">实战场景</text>
+  <rect x="680" y="300" width="480" height="100" rx="8" fill="#183a4a"/>
+  <text x="700" y="350" font-family="system-ui,sans-serif" font-size="16" fill="#d8894f">场景1：快速规划</text>
+  <text x="700" y="380" font-family="monospace" font-size="14" fill="#eef7f3">/plan 实现用户登录模块</text>
+
+  <rect x="680" y="420" width="480" height="100" rx="8" fill="#183a4a"/>
+  <text x="700" y="470" font-family="system-ui,sans-serif" font-size="16" fill="#d8894f">场景2：切换模型</text>
+  <text x="700" y="500" font-family="monospace" font-size="14" fill="#eef7f3">/model gpt-4</text>
+
+  <rect x="680" y="540" width="480" height="100" rx="8" fill="#183a4a"/>
+  <text x="700" y="590" font-family="system-ui,sans-serif" font-size="16" fill="#d8894f">场景3：查看上下文</text>
+  <text x="700" y="620" font-family="monospace" font-size="14" fill="#eef7f3">/context</text>
+</svg>

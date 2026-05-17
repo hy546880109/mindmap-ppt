@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" style="background:#faf8f5">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <rect x="80" y="60" width="1120" height="100" rx="12" fill="#183a4a"/>
+  <text x="110" y="120" font-family="system-ui,sans-serif" font-size="32" fill="#fffdf8" font-weight="bold">额外福利与资源</text>
+
+  <rect x="80" y="180" width="560" height="260" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="110" y="230" font-family="system-ui,sans-serif" font-size="22" fill="#183a4a" font-weight="bold">推荐资源</text>
+  <rect x="110" y="270" width="500" height="80" rx="8" fill="#183a4a"/>
+  <text x="140" y="315" font-family="system-ui,sans-serif" font-size="16" fill="#d8894f">📄 官方文档</text>
+  <text x="280" y="315" font-family="monospace" font-size="14" fill="#eef7f3">docs.anthropic.com</text>
+
+  <rect x="110" y="360" width="500" height="80" rx="8" fill="#183a4a"/>
+  <text x="140" y="405" font-family="system-ui,sans-serif" font-size="16" fill="#d8894f">🔌 社区插件</text>
+  <text x="280" y="405" font-family="monospace" font-size="14" fill="#eef7f3">github.com/anthropics/claude-code-plugins</text>
+
+  <rect x="80" y="460" width="560" height="280" rx="12" fill="#d8894f"/>
+  <text x="110" y="510" font-family="system-ui,sans-serif" font-size="22" fill="#fffdf8" font-weight="bold">交流群组</text>
+  <rect x="110" y="550" width="220" height="80" rx="8" fill="#fffdf8"/>
+  <text x="140" y="590" font-family="system-ui,sans-serif" font-size="14" fill="#183a4a" font-weight="bold">Discord</text>
+  <text x="140" y="615" font-family="monospace" font-size="12" fill="#666">discord.gg/claude-code</text>
+
+  <rect x="350" y="550" width="270" height="80" rx="8" fill="#fffdf8"/>
+  <text x="380" y="590" font-family="system-ui,sans-serif" font-size="14" fill="#183a4a" font-weight="bold">GitHub Discussions</text>
+  <text x="380" y="615" font-family="monospace" font-size="12" fill="#666">讨论区</text>
+
+  <rect x="660" y="180" width="540" height="560" rx="12" fill="#fffdf8" stroke="#183a4a" stroke-width="2"/>
+  <text x="690" y="230" font-family="system-ui,sans-serif" font-size="22" fill="#183a4a" font-weight="bold">配置模板</text>
+  <rect x="690" y="270" width="480" height="80" rx="8" fill="#183a4a"/>
+  <text x="720" y="315" font-family="system-ui,sans-serif" font-size="16" fill="#d8894f">⚙️ 配置模板</text>
+  <text x="860" y="315" font-family="monospace" font-size="14" fill="#eef7f3">github.com/anthropics/claude-code-configs</text>
+
+  <rect x="690" y="380" width="480" height="200" rx="8" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="720" y="430" font-family="system-ui,sans-serif" font-size="16" fill="#183a4a" font-weight="bold">快速上手</text>
+  <text x="720" y="470" font-family="monospace" font-size="14" fill="#666">npx skills add hy546880109/mindmap-ppt</text>
+  <text x="720" y="510" font-family="system-ui,sans-serif" font-size="14" fill="#666">--skill mindmap-ppt-builder</text>
+</svg>

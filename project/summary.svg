@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" style="background:#faf8f5">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <rect x="80" y="60" width="1120" height="100" rx="12" fill="#183a4a"/>
+  <text x="110" y="120" font-family="system-ui,sans-serif" font-size="32" fill="#fffdf8" font-weight="bold">总结：从入门到精通</text>
+
+  <rect x="80" y="180" width="360" height="280" rx="12" fill="#183a4a"/>
+  <text x="110" y="230" font-family="system-ui,sans-serif" font-size="22" fill="#d8894f" font-weight="bold">新手必会（第一周）</text>
+  <text x="110" y="280" font-family="system-ui,sans-serif" font-size="18" fill="#eef7f3">✅ / 基础命令</text>
+  <text x="110" y="320" font-family="system-ui,sans-serif" font-size="18" fill="#eef7f3">✅ @ 引用文件</text>
+  <text x="110" y="360" font-family="system-ui,sans-serif" font-size="18" fill="#eef7f3">✅ ! Bash命令</text>
+  <text x="110" y="400" font-family="system-ui,sans-serif" font-size="18" fill="#eef7f3">✅ 5个核心快捷键</text>
+
+  <rect x="460" y="180" width="360" height="280" rx="12" fill="#d8894f"/>
+  <text x="490" y="230" font-family="system-ui,sans-serif" font-size="22" fill="#fffdf8" font-weight="bold">进阶技巧（第一月）</text>
+  <text x="490" y="280" font-family="system-ui,sans-serif" font-size="18" fill="#183a4a">✅ 组合使用符号</text>
+  <text x="490" y="320" font-family="system-ui,sans-serif" font-size="18" fill="#183a4a">✅ 模式操作</text>
+  <text x="490" y="360" font-family="system-ui,sans-serif" font-size="18" fill="#183a4a">✅ 后台任务</text>
+  <text x="490" y="400" font-family="system-ui,sans-serif" font-size="18" fill="#183a4a">✅ 自定义配置</text>
+
+  <rect x="840" y="180" width="360" height="280" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="870" y="230" font-family="system-ui,sans-serif" font-size="22" fill="#183a4a" font-weight="bold">高级玩法（持续精进）</text>
+  <text x="870" y="280" font-family="system-ui,sans-serif" font-size="18" fill="#666">✅ 编写自定义命令</text>
+  <text x="870" y="320" font-family="system-ui,sans-serif" font-size="18" fill="#666">✅ 建立个人工作流</text>
+  <text x="870" y="360" font-family="system-ui,sans-serif" font-size="18" fill="#666">✅ 优化上下文</text>
+  <text x="870" y="400" font-family="system-ui,sans-serif" font-size="18" fill="#666">✅ 探索插件生态</text>
+
+  <rect x="80" y="500" width="1120" height="240" rx="12" fill="#fffdf8" stroke="#183a4a" stroke-width="2"/>
+  <text x="120" y="560" font-family="system-ui,sans-serif" font-size="24" fill="#183a4a" font-weight="bold">四字口诀</text>
+  <rect x="120" y="590" width="200" height="80" rx="8" fill="#183a4a"/>
+  <text x="155" y="640" font-family="system-ui,sans-serif" font-size="28" fill="#d8894f">/</text>
+  <text x="185" y="640" font-family="system-ui,sans-serif" font-size="16" fill="#eef7f3">操作</text>
+
+  <rect x="340" y="590" width="200" height="80" rx="8" fill="#183a4a"/>
+  <text x="365" y="640" font-family="system-ui,sans-serif" font-size="28" fill="#d8894f">@</text>
+  <text x="395" y="640" font-family="system-ui,sans-serif" font-size="16" fill="#eef7f3">上下文</text>
+
+  <rect x="560" y="590" width="200" height="80" rx="8" fill="#d8894f"/>
+  <text x="585" y="640" font-family="system-ui,sans-serif" font-size="28" fill="#fffdf8">!</text>
+  <text x="615" y="640" font-family="system-ui,sans-serif" font-size="16" fill="#fffdf8">运行</text>
+
+  <rect x="780" y="590" width="240" height="80" rx="8" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="820" y="640" font-family="system-ui,sans-serif" font-size="24" fill="#183a4a">无前缀</text>
+  <text x="920" y="640" font-family="system-ui,sans-serif" font-size="16" fill="#666">思考</text>
+</svg>

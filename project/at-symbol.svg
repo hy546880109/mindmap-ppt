@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" style="background:#faf8f5">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <rect x="80" y="60" width="1120" height="120" rx="12" fill="#183a4a"/>
+  <text x="110" y="130" font-family="system-ui,sans-serif" font-size="36" fill="#fffdf8" font-weight="bold">艾特符 @ ：上下文注入神器</text>
+  <text x="820" y="130" font-family="system-ui,sans-serif" font-size="20" fill="#d8894f">真实加载到推理上下文</text>
+
+  <rect x="80" y="200" width="360" height="180" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="100" y="260" font-family="system-ui,sans-serif" font-size="18" fill="#183a4a" font-weight="bold">引用单个文件</text>
+  <text x="100" y="310" font-family="monospace" font-size="16" fill="#d8894f">@main.py</text>
+  <text x="100" y="350" font-family="system-ui,sans-serif" font-size="14" fill="#666">帮检查这个文件的bug</text>
+
+  <rect x="460" y="200" width="360" height="180" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="480" y="260" font-family="system-ui,sans-serif" font-size="18" fill="#183a4a" font-weight="bold">引用多个文件</text>
+  <text x="480" y="310" font-family="monospace" font-size="16" fill="#d8894f">@main.py @utils.py</text>
+  <text x="480" y="350" font-family="system-ui,sans-serif" font-size="14" fill="#666">检查重复逻辑</text>
+
+  <rect x="840" y="200" width="360" height="180" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="860" y="260" font-family="system-ui,sans-serif" font-size="18" fill="#183a4a" font-weight="bold">引用整个目录</text>
+  <text x="860" y="310" font-family="monospace" font-size="16" fill="#d8894f">@src/</text>
+  <text x="860" y="350" font-family="system-ui,sans-serif" font-size="14" fill="#666">分析项目结构</text>
+
+  <rect x="80" y="420" width="1120" height="320" rx="12" fill="#fffdf8" stroke="#183a4a" stroke-width="2"/>
+  <text x="120" y="480" font-family="system-ui,sans-serif" font-size="22" fill="#183a4a" font-weight="bold">实战技巧</text>
+
+  <rect x="120" y="520" width="340" height="180" rx="8" fill="#183a4a"/>
+  <text x="140" y="570" font-family="system-ui,sans-serif" font-size="16" fill="#d8894f">技巧1：代码审查</text>
+  <text x="140" y="610" font-family="monospace" font-size="13" fill="#eef7f3">@app.py @models.py</text>
+  <text x="140" y="640" font-family="monospace" font-size="13" fill="#eef7f3">@views.py</text>
+
+  <rect x="480" y="520" width="340" height="180" rx="8" fill="#183a4a"/>
+  <text x="500" y="570" font-family="system-ui,sans-serif" font-size="16" fill="#d8894f">技巧2：批量修改</text>
+  <text x="500" y="610" font-family="monospace" font-size="13" fill="#eef7f3">@src/components/*</text>
+  <text x="500" y="640" font-family="system-ui,sans-serif" font-size="13" fill="#eef7f3">kebab → camelCase</text>
+
+  <rect x="840" y="520" width="340" height="180" rx="8" fill="#183a4a"/>
+  <text x="860" y="570" font-family="system-ui,sans-serif" font-size="16" fill="#d8894f">技巧3：日志分析</text>
+  <text x="860" y="610" font-family="monospace" font-size="13" fill="#eef7f3">@error.log</text>
+  <text x="860" y="640" font-family="system-ui,sans-serif" font-size="13" fill="#eef7f3">找出主要问题</text>
+</svg>

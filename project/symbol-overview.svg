@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" style="background:#faf8f5">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <rect x="80" y="80" width="340" height="260" rx="12" fill="#183a4a"/>
+  <text x="120" y="160" font-family="system-ui,sans-serif" font-size="80" fill="#d8894f" font-weight="bold">/</text>
+  <text x="120" y="230" font-family="system-ui,sans-serif" font-size="20" fill="#fffdf8">命令型</text>
+  <text x="120" y="280" font-family="system-ui,sans-serif" font-size="16" fill="#eef7f3">执行内置操作</text>
+
+  <rect x="460" y="80" width="340" height="260" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="520" y="160" font-family="system-ui,sans-serif" font-size="80" fill="#183a4a" font-weight="bold">@</text>
+  <text x="500" y="230" font-family="system-ui,sans-serif" font-size="20" fill="#183a4a">上下文</text>
+  <text x="500" y="280" font-family="system-ui,sans-serif" font-size="16" fill="#666">引用文件/目录</text>
+
+  <rect x="840" y="80" width="340" height="260" rx="12" fill="#d8894f"/>
+  <text x="900" y="160" font-family="system-ui,sans-serif" font-size="80" fill="#fffdf8" font-weight="bold">!</text>
+  <text x="880" y="230" font-family="system-ui,sans-serif" font-size="20" fill="#fffdf8">Bash模式</text>
+  <text x="880" y="280" font-family="system-ui,sans-serif" font-size="16" fill="#fff">直接执行命令</text>
+
+  <rect x="80" y="400" width="1100" height="320" rx="12" fill="#fffdf8" stroke="#183a4a" stroke-width="2"/>
+  <text x="120" y="470" font-family="system-ui,sans-serif" font-size="22" fill="#183a4a" font-weight="bold">使用场景对照</text>
+  <rect x="120" y="500" width="200" height="60" rx="8" fill="#183a4a"/>
+  <text x="145" y="540" font-family="system-ui,sans-serif" font-size="16" fill="#fffdf8">文件操作</text>
+  <rect x="340" y="500" width="200" height="60" rx="8" fill="#183a4a"/>
+  <text x="360" y="540" font-family="system-ui,sans-serif" font-size="16" fill="#fffdf8">代码审查</text>
+  <rect x="560" y="500" width="200" height="60" rx="8" fill="#183a4a"/>
+  <text x="580" y="540" font-family="system-ui,sans-serif" font-size="16" fill="#fffdf8">系统操作</text>
+  <rect x="780" y="500" width="200" height="60" rx="8" fill="#183a4a"/>
+  <text x="800" y="540" font-family="system-ui,sans-serif" font-size="16" fill="#fffdf8">包管理</text>
+</svg>

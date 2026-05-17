@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" style="background:#faf8f5">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <rect x="80" y="60" width="1120" height="100" rx="12" fill="#183a4a"/>
+  <text x="110" y="120" font-family="system-ui,sans-serif" font-size="32" fill="#fffdf8" font-weight="bold">快捷键大全：核心快捷键与文本编辑</text>
+
+  <rect x="80" y="180" width="1120" height="260" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="110" y="230" font-family="system-ui,sans-serif" font-size="20" fill="#183a4a" font-weight="bold">核心快捷键</text>
+  <rect x="110" y="260" width="160" height="70" rx="8" fill="#183a4a"/>
+  <text x="140" y="300" font-family="monospace" font-size="18" fill="#d8894f">Ctrl+C</text>
+  <text x="140" y="320" font-family="system-ui,sans-serif" font-size="12" fill="#eef7f3">取消</text>
+
+  <rect x="290" y="260" width="160" height="70" rx="8" fill="#183a4a"/>
+  <text x="310" y="300" font-family="monospace" font-size="18" fill="#d8894f">Ctrl+D</text>
+  <text x="310" y="320" font-family="system-ui,sans-serif" font-size="12" fill="#eef7f3">退出</text>
+
+  <rect x="470" y="260" width="160" height="70" rx="8" fill="#183a4a"/>
+  <text x="490" y="300" font-family="monospace" font-size="18" fill="#d8894f">Ctrl+L</text>
+  <text x="490" y="320" font-family="system-ui,sans-serif" font-size="12" fill="#eef7f3">清屏</text>
+
+  <rect x="650" y="260" width="160" height="70" rx="8" fill="#183a4a"/>
+  <text x="670" y="300" font-family="monospace" font-size="18" fill="#d8894f">Ctrl+R</text>
+  <text x="670" y="320" font-family="system-ui,sans-serif" font-size="12" fill="#eef7f3">历史搜索</text>
+
+  <rect x="830" y="260" width="160" height="70" rx="8" fill="#183a4a"/>
+  <text x="850" y="300" font-family="monospace" font-size="18" fill="#d8894f">Ctrl+B</text>
+  <text x="850" y="320" font-family="system-ui,sans-serif" font-size="12" fill="#eef7f3">后台运行</text>
+
+  <rect x="80" y="350" width="1120" height="80" rx="8" fill="#d8894f"/>
+  <text x="110" y="400" font-family="system-ui,sans-serif" font-size="16" fill="#fffdf8">Ctrl+G 打开编辑器</text>
+  <text x="350" y="400" font-family="system-ui,sans-serif" font-size="16" fill="#fffdf8">|</text>
+  <text x="400" y="400" font-family="system-ui,sans-serif" font-size="16" fill="#fffdf8">Ctrl+O 详细输出</text>
+
+  <rect x="80" y="460" width="540" height="280" rx="12" fill="#fffdf8" stroke="#183a4a" stroke-width="2"/>
+  <text x="110" y="510" font-family="system-ui,sans-serif" font-size="20" fill="#183a4a" font-weight="bold">多行输入</text>
+  <text x="110" y="560" font-family="monospace" font-size="16" fill="#666">\\ + Enter    快速转义</text>
+  <text x="110" y="600" font-family="monospace" font-size="16" fill="#666">Option + Enter  macOS</text>
+  <text x="110" y="640" font-family="monospace" font-size="16" fill="#666">Shift + Enter  通用</text>
+  <text x="110" y="680" font-family="monospace" font-size="16" fill="#666">Ctrl + J      控制序列</text>
+
+  <rect x="660" y="460" width="540" height="280" rx="12" fill="#183a4a"/>
+  <text x="690" y="510" font-family="system-ui,sans-serif" font-size="20" fill="#d8894f" font-weight="bold">文本编辑</text>
+  <text x="690" y="560" font-family="monospace" font-size="16" fill="#fffdf8">Ctrl+K  删除到行尾</text>
+  <text x="690" y="600" font-family="monospace" font-size="16" fill="#fffdf8">Ctrl+U  删除整行</text>
+  <text x="690" y="640" font-family="monospace" font-size="16" fill="#fffdf8">Ctrl+Y  粘贴</text>
+  <text x="690" y="680" font-family="monospace" font-size="16" fill="#fffdf8">Alt+B/F  移动单词</text>
+</svg>

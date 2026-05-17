@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" style="background:#faf8f5">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <rect x="80" y="80" width="1120" height="640" rx="16" fill="#183a4a"/>
+
+  <text x="640" y="200" font-family="system-ui,sans-serif" font-size="48" fill="#fffdf8" font-weight="bold" text-anchor="middle">四字口诀</text>
+
+  <rect x="160" y="280" width="240" height="160" rx="12" fill="#d8894f"/>
+  <text x="280" y="380" font-family="system-ui,sans-serif" font-size="72" fill="#fffdf8" font-weight="bold" text-anchor="middle">/</text>
+  <text x="280" y="420" font-family="system-ui,sans-serif" font-size="24" fill="#183a4a" text-anchor="middle">操作</text>
+
+  <rect x="420" y="280" width="240" height="160" rx="12" fill="#eef7f3"/>
+  <text x="540" y="380" font-family="system-ui,sans-serif" font-size="72" fill="#183a4a" font-weight="bold" text-anchor="middle">@</text>
+  <text x="540" y="420" font-family="system-ui,sans-serif" font-size="24" fill="#666" text-anchor="middle">上下文</text>
+
+  <rect x="680" y="280" width="240" height="160" rx="12" fill="#d8894f"/>
+  <text x="800" y="380" font-family="system-ui,sans-serif" font-size="72" fill="#fffdf8" font-weight="bold" text-anchor="middle">!</text>
+  <text x="800" y="420" font-family="system-ui,sans-serif" font-size="24" fill="#183a4a" text-anchor="middle">运行</text>
+
+  <rect x="940" y="280" width="200" height="160" rx="12" fill="#fffdf8"/>
+  <text x="1040" y="360" font-family="system-ui,sans-serif" font-size="36" fill="#183a4a" text-anchor="middle">无前缀</text>
+  <text x="1040" y="420" font-family="system-ui,sans-serif" font-size="24" fill="#666" text-anchor="middle">思考</text>
+
+  <text x="640" y="560" font-family="system-ui,sans-serif" font-size="28" fill="#d8894f" text-anchor="middle">从今天开始，让开发效率提升10倍！</text>
+  <text x="640" y="620" font-family="system-ui,sans-serif" font-size="20" fill="#eef7f3" text-anchor="middle">#ClaudeCode #AI开发 #效率工具</text>
+</svg>

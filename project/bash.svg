@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="#faf8f5"/>
+  <rect x="80" y="60" width="1120" height="120" rx="12" fill="#d8894f"/>
+  <text x="140" y="130" font-family="system-ui,sans-serif" font-size="32" fill="#fffdf8" font-weight="bold">感叹号 ! 直接执行Bash命令</text>
+  <text x="750" y="130" font-family="system-ui,sans-serif" font-size="20" fill="#183a4a">无需解释或批准</text>
+
+  <rect x="80" y="220" width="500" height="280" rx="12" fill="#183a4a"/>
+  <text x="120" y="280" font-family="system-ui,sans-serif" font-size="22" fill="#d8894f" font-weight="bold">基础用法</text>
+  <text x="120" y="340" font-family="monospace" font-size="22" fill="#fffdf8">! ls -la</text>
+  <text x="120" y="380" font-family="system-ui,sans-serif" font-size="16" fill="#eef7f3">列出所有文件</text>
+  <text x="120" y="430" font-family="monospace" font-size="22" fill="#fffdf8">! npm install</text>
+  <text x="120" y="470" font-family="system-ui,sans-serif" font-size="16" fill="#eef7f3">安装依赖</text>
+
+  <rect x="620" y="220" width="580" height="280" rx="12" fill="#eef7f3" stroke="#183a4a" stroke-width="2"/>
+  <text x="660" y="280" font-family="system-ui,sans-serif" font-size="22" fill="#183a4a" font-weight="bold">高级技巧</text>
+  <rect x="660" y="310" width="500" height="60" rx="8" fill="#183a4a"/>
+  <text x="680" y="350" font-family="system-ui,sans-serif" font-size="18" fill="#d8894f">Ctrl+B 后台运行</text>
+  <rect x="660" y="390" width="500" height="60" rx="8" fill="#183a4a"/>
+  <text x="680" y="430" font-family="system-ui,sans-serif" font-size="18" fill="#d8894f">Tab 自动补全</text>
+  <rect x="660" y="470" width="500" height="60" rx="8" fill="#183a4a"/>
+  <text x="680" y="510" font-family="system-ui,sans-serif" font-size="18" fill="#d8894f">链式命令</text>
+
+  <rect x="80" y="540" width="1120" height="200" rx="12" fill="#fffdf8" stroke="#183a4a" stroke-width="2"/>
+  <text x="120" y="590" font-family="system-ui,sans-serif" font-size="20" fill="#183a4a" font-weight="bold">链式命令示例</text>
+  <rect x="120" y="620" width="1060" height="80" rx="8" fill="#183a4a"/>
+  <text x="150" y="670" font-family="monospace" font-size="18" fill="#d8894f">! git add . &amp;&amp; git commit -m "update" &amp;&amp; git push</text>
+</svg>
